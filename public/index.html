@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script type="module" src="js/router.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <h1 class="h1">GL 2023 Marouane Benabdelkader</h1>
+    <section id="authApp" class="hidden authApp">
+            <nav>
+                <ul>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>
+            </nav>
+        <div>
+            <article id="loginComponent"  class="hidden loginComponent">
+                <h2>Login</h2>
+                <form action="" id="loginForm">
+                    <label for="email">
+                        <b>email</b>
+                        <input type="email" name="email" required placeholder="email">
+                    </label>
+                    <label for="password">
+                        <b>password</b>
+                        <input type="password" name="password" placeholder="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                    </label>
+                    <button type="submit" id="submitLogin">login</button>
+                </form>
+            </article>
+            <!-- add hidden here -->
+            <article id="registerComponent" class="hidden registerComponent ">
+                <h2>Register</h2>
+                <form id = "registerForm">
+                    <label for="email">
+                        <b>email</b>
+                        <input type="email" name="email" required placeholder="email">
+                    </label>
+                    <label for="password">
+                        <b>password</b>
+                        <input name="password" type="password" placeholder="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                    </label>
+                    <label for="password2">
+                        <b>password2</b>
+                        <input name="password2" type="password" placeholder="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                    </label>
+                    <div class="divBtns">
+                        <button type="reset" >reset</button>
+                        <button type="submit" >register</button>
+                    </div>
+                </form>
+            </article>
+            
+        </div>
+    </section>
+    <section id="todoApp" class="hidden todoApp">
+        <div id="header">
+            <h3 id="emailCatch"></h4>
+            <button id="logout">Logout</button>
+        </div>
+        <article id="formAndData">
+            <form action="" id="todoForm">
+                <label for="title">
+                    <b>title</b>
+                    <input type="text" name="title" id="title">
+                </label>
+                <label for="completed">
+                    <b>completed</b>
+                    <select id="completed" name="completed">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </label>
+                <label for="id" class="hidden">
+                    <b>id</b>
+                    <input type="text" disabled name="id">
+                </label>   
+                <div id="todoBtns">
+                    <button id="saveBtn"> save </button>
+                    <button id="resetBtn"> reset</button>
+                </div> 
+            </form>
+            <table id="my-table">
+                <tr>
+                    <th>Title</th>
+                    <th>Completed</th>
+                    <th>Options</th>
+                </tr>
+                <tbody id="tbody">
+                
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <footer>
+        <h1 id="footerh">GL 2023</h1>
+    </footer>
+</body>
+</html>
